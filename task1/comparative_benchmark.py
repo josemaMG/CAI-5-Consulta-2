@@ -18,7 +18,7 @@ def run_benchmark():
 
         print("[*] Generando instancias y public/private keys de Paillier, BFV y CKKS...")
         engines = {
-            "PHE (Paillier)": PaillierPHEEngine(key_size=1024),
+            "PHE (Paillier)": PaillierPHEEngine(key_size=2048),
             "SHE (BFV - TenSEAL)": TenSEALBFVSHEEngine(plain_modulus=1032193),
             "FHE (CKKS - TenSEAL)": TenSEALCKKSFHEEngine()
         }
@@ -66,28 +66,6 @@ def run_benchmark():
                 
             f.write(f"[{name}] -> Precisión Mantenida: {'SI' if is_match else 'NO (Sufre Overflow/Error debido a su restricción algorítmica)'}\n")
             
-        f.write("\n=========================================================================\n")
-        f.write(" CONCLUSIÓN TÉCNICA Y ELECCIÓN DEL MEJOR ALGORITMO\n")
-        f.write("=========================================================================\n")
-        f.write("PHE (Paillier):\n")
-        f.write(" - Pros: Soporta infinita suma con precisión 100% exacta sin importar lo inmenso que sea el número.\n")
-        f.write(" - Contras: El cifrado inicial y descifrado son computacionalmente más lentos a nivel de CPU comparados a lattice-based cryptography.\n\n")
-        
-        f.write("SHE (BFV - Lattices):\n")
-        f.write(" - Pros: Cifrado en el cliente estrepitosamente mas rápido.\n")
-        f.write(" - Contras: Como pudimos ver en el Test 2, es vulnerable al 'Desbordamiento Modular' (Overflow). Si los gastos sumados de la aerolínea superan la capacidad del plain_modulus, arroja saldos inservibles o negativos erróneos.\n\n")
-
-        f.write("FHE (CKKS):\n")
-        f.write(" - Pros: Acepta decimales y no explota por overflow modular como BFV.\n")
-        f.write(" - Contras: Trabaja en base a la aproximación, la inmensa cantidad de ruido introducida causa 'pérdida de céntimos/euros' en sumatorias continuas además de requerir grandes cantidades RAM.\n\n")
-        
-        f.write("VEREDICTO FINAL PARA LA AEROLÍNEA (TAREA 1: SUMA DE GASTOS):\n")
-        f.write("=> El MEJOR motor para esta tarea financiera es **PHE (Paillier)**.\n")
-        f.write("Razones:\n")
-        f.write("1. Tratar con finanzas requiere precisión absoluta total (descartando completamente la aproximación flotante de FHE-CKKS).\n")
-        f.write("2. No podemos arriesgarnos a un overflow modular (SHE-BFV falla y rompe el resultado al acumular mucho dinero y exige estar controlando y limitando matemáticamente el umbral del modulo).\n")
-        f.write("3. La ineficiencia en ms de Paillier afecta al cliente de forma asíncrona pero es insignificante a escala final, premiando la exactitud universal del 100%.\n")
-
     print(f"\n[OK] ¡Tests completados! Log comparativo exitosamente grabado en: {log_path}")
 
 if __name__ == "__main__":

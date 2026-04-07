@@ -1,0 +1,25 @@
+=========================================================================
+ REPORTE DE EFICACIA Y RENDIMIENTO: PROTOCOLO DH-PSI (Tarea 2)
+=========================================================================
+
+Fecha de ejecución: 2026-04-07
+Objetivo: Validar la capacidad de realizar una intersección privada de conjuntos sobre distintos tamaños de datos, comprobando que es inviable derivar el contenido si no hay intersección.
+
+--- TEST 1: Datos Reducidos (1000 Delincuentes, 100 Pasajeros) ---
+  - Tiempo de ejecución protocolo: 0.1834 segundos
+  - Total de coincidencias encontradas: 1
+  - Coincidencias exactas tras normalización: ['TERRORISTA_PELIGROSO']
+  - Eficacia y Privacidad Comprobada: SI (Las aerolíneas aportaron 'terrorista_peligroso' y fue normalizado y detectado).
+
+--- TEST 2: Escenario Real Aerolíneas (10,000 Delincuentes, 250 Pasajeros) ---
+  - Tiempo de ejecución protocolo: 1.8567 segundos
+  - Total de coincidencias encontradas: 1
+  - Coincidencias exactas tras normalización: ['TERRORISTA_PELIGROSO']
+  - Eficacia y Privacidad Comprobada: SI
+
+--- TEST 3: Escala Crítica (25,000 Delincuentes, 300 Pasajeros) ---
+  - Tiempo de ejecución protocolo: 4.5420 segundos
+  - Total de coincidencias encontradas: 1
+  - Coincidencias exactas tras normalización: ['TERRORISTA_PELIGROSO']
+  - Eficacia y Privacidad Comprobada: SI
+

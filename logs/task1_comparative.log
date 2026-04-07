@@ -1,0 +1,28 @@
+=========================================================================
+ REPORTE COMPARATIVO: PHE vs SHE vs FHE (Tarea 1)
+=========================================================================
+
+--- TEST 1: CARGA LIGERA MULTIPLE (50 operaciones de gasto bajo) ---
+[PHE (Paillier)]
+  - Tiempo Cifrado (x50 obj): 1.0905s
+  - Tiempo Procesamiento Nube: 0.0014s
+  - Tiempo Descifrado Result: 0.0068s
+  - Éxito/Integridad comprobada: SI
+
+[SHE (BFV - TenSEAL)]
+  - Tiempo Cifrado (x50 obj): 0.3303s
+  - Tiempo Procesamiento Nube: 0.0089s
+  - Tiempo Descifrado Result: 0.0021s
+  - Éxito/Integridad comprobada: SI
+
+[FHE (CKKS - TenSEAL)]
+  - Tiempo Cifrado (x50 obj): 0.3823s
+  - Tiempo Procesamiento Nube: 0.0059s
+  - Tiempo Descifrado Result: 0.0021s
+  - Éxito/Integridad comprobada: SI
+
+--- TEST 2: VALORES GIGANTES (1.5M, 2M, 3M) ---
+Propósito: Identificar esquemas que fallan matemáticamente o pierden preción por el límite de modulo algorítmico.
+[PHE (Paillier)] -> Precisión Mantenida: SI
+[SHE (BFV - TenSEAL)] -> Precisión Mantenida: NO (Sufre Overflow/Error debido a su restricción algorítmica)
+[FHE (CKKS - TenSEAL)] -> Precisión Mantenida: SI

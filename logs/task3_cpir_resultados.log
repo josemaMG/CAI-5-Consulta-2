@@ -1,0 +1,28 @@
+=========================================================================
+ REPORTE DE EFICACIA Y RENDIMIENTO: PROTOCOLO CPIR PARA VUELOS (Tarea 3)
+=========================================================================
+
+Fecha de ejecución: 2026-04-07
+Objetivo: Validar los tiempos de latencia y nivel de privacidad del cliente sobre un modelo híbrido Paillier, comprobando que se oculta el Vuelo consultado al servidor en todo momento y no existen fugas en la red.
+
+--- TEST 1: LATENCIA ESCALABLE (Base de datos: 300 Vuelos) ---
+  - Vuelo ID Consultado: 150
+  - Tiempo total operación (Cliente + Servidor): 14.3412 segundos
+  - Precio Real de la BD: 785 EUR
+  - Precio Recuperado Vía CPIR (Oculto): 785 EUR
+  - Eficacia y Precisión Comprobada: SI
+
+--- TEST 2: LATENCIA MEDIA (Base de datos: 800 Vuelos) ---
+  - Vuelo ID Consultado: 404
+  - Tiempo total operación (Cliente + Servidor): 39.5104 segundos
+  - Precio Real de la BD: 490 EUR
+  - Precio Recuperado Vía CPIR (Oculto): 490 EUR
+  - Eficacia y Precisión Comprobada: SI
+
+--- TEST 3: ESCENARIO AEROLÍNEA (Base de datos: 1273 Vuelos) ---
+  - Vuelo ID Consultado: 1200
+  - Tiempo total operación (Cliente + Servidor): 62.4391 segundos
+  - Precio Real de la BD: 1250 EUR
+  - Precio Recuperado Vía CPIR (Oculto): 1250 EUR
+  - Eficacia y Precisión Comprobada: SI
+
