@@ -5,9 +5,8 @@ import os
 from datetime import datetime
 from phe import paillier
 
-from task1_homomorphic_sum import simulate_homomorphic_sum
-from task2_psi_delincuentes import buscaComunes
-from task3_cpir_vuelos import buscaVuelo
+from task2.task2_psi_delincuentes import buscaComunes
+from task3.task3_cpir_vuelos import buscaVuelo
 
 def run_homomorphic_task(task_id, public_key, private_key):
     """ Ejecución segura en hilo para la tarea 1 """

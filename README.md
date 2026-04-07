@@ -143,3 +143,21 @@ Apostamos por la integración de una estrategia tecnológica integral orientada 
 1. **Borrado Seguro Efectivo (Crypto-shredding):** Se determina que intentar el borrado físico, wipe o sobrescritura sectorial es operativamente imposible en nubes públicas, clústeres distribuidos o arquitecturas modernas event-driven. El **Crypto-shredding** resuelve el problema elegantemente: mediante la simple eliminación lógica definitiva de la llave maestra criptográfica (Master Key), cualquier copia latente, log descontrolado o backup huérfano distribuidos por la red pierden su valor instantáneamente mutando a ruido ininteligible irrecuperable.
 2. **Always Encrypted Holístico:** Apoyarse únicamente en propuestas comerciales parciales orientadas a bases de datos relacionales es insuficiente (además de estar limitadas a igualdades perdiendo capacidades operativas). El verdadero paradigma "Always Encrypted DLM" cobra vida ya que nuestros motores de cálculo propuestos (como procesar sumas de forma homomórfica o cruzar identificadores mediante DH-PSI) **procesan la información estando consistentemente cifrada desde origen hasta entrega final**, mitigando las ventanas temporales en texto claro.
 3. **Cumplimiento Normativo Intransigente:** Al obligar a los datos a transitar todas sus fases (almacenamiento, transporte, uso y borrado) bajo protección criptográfica continua y en contenedores aislados, la aerolínea exhibe un cumplimiento directo, drástico y verificable frente a exigencias regulatorias como la Directiva NIS2 y el RGPD, anulando en la práctica el impacto o penalizaciones por "Data Breaches".
+
+---
+
+## 6. Anexo: Propuestas de Inclusión para la Política de Privacidad (Sitio Web)
+
+A continuación se exponen los párrafos redactados y validados que deben integrarse inmediatamente en la web pública de la aerolínea. El objetivo es transparentar a los usuarios el correcto uso y tratamiento avanzado que se aplica sobre sus datos sin vulnerar su confianza.
+
+### 6.1. Tratamiento y envío de Gastos a infraestructura de Nube Pública (Tarea 1)
+> **Tratamiento Confidencial en Servicios de Nube de Terceros**
+> *Para procesar sus ventajas de fidelización mediante la acumulación de sus gastos, nos apoyamos en infraestructuras externas de forma estrictamente lícita y segura. Empleamos avanzados algoritmos de Criptografía Homomórfica en nuestros sistemas antes de transmitir su información estadística. Esto significa que la nube suma matemáticamente su gasto, pero ni la nube ni sus administradores son capaces de leer o inspeccionar el saldo que usted aporta. Hacemos un uso legítimo de terceros proveedores operando a oscuras, asegurándonos de que su privacidad económica nunca se vea comprometida durante el procesamiento.*
+
+### 6.2. Evaluaciones de Seguridad contra Listas Gubernamentales (Tarea 2)
+> **Colaboración Segura con Autoridades Gubernamentales**
+> *Hacemos una gestión diligente y obligatoria de su seguridad, colaborando con organismos gubernamentales para contrastar nuestras listas de vuelos contra bases de datos de delincuentes y sospechosos bajo búsqueda. Para garantizar el uso lícito de esta comprobación sin comprometer los derechos fundamentales de los pasajeros inocentes, usamos protocolos matemáticos de Intersección de Conjuntos Privados (PSI). Mediante este método, las autoridades solo descubrirán si en nuestro vuelo se halla algún terrorista o persona bajo reclamación judicial, resguardando de forma opaca y total la identidad y derechos del resto de ciudadanos libres de cargos.*
+
+### 6.3. Anonimato en las Consultas de Precios de Vuelos (Tarea 3)
+> **Privacidad y Cero Rastreo en Consultas de Vuelos**
+> *Nos comprometemos a no rastrear ni perfilar sus intereses. Cuando usted requiere consultar los precios de posibles destinos, utilizamos tecnologías de Recuperación de Información Privada (CPIR) para garantizar el anonimato comercial total. Con esta implementación, nuestra plataforma le entregará ágilmente todos los costes solicitados efectuando el cómputo necesario para informarle sin poder extraer ni almacenar internamente registro alguno sobre a qué destino buscaba ir, eludiendo cualquier rastreo de sus decisiones preliminares.*
