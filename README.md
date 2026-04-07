@@ -118,7 +118,17 @@ Se ha implementado el código en el script `task3_cpir_vuelos.py` configurado co
 
 ---
 
-## 4. Análisis de Alternativas de Procesamiento Confidencial (TEE vs. Homomorfismo)
+## 4. Registro de Pruebas y Resultados de Ejecución
+
+Para validar el rendimiento, la escalabilidad y la eficacia de cada uno de los protocolos implementados, el equipo consultor ha diseñado un conjunto de pruebas analíticas que evalúan distintos volúmenes de carga y recogen métricas de tiempos en tiempo real. Todos estos registros detallados con sus correspondientes evaluaciones están volcados en formato log y se encuentran disponibles en el directorio de registros:
+
+- **logs/task1_comparative.log:** Muestra los tiempos de cifrado, de procesamiento en la nube y de descifrado, comprobando en la práctica los problemas de usar ciertas vertientes de homomorfismo frente a PHE para procesar valores con cargas numéricamente inmensas.
+- **logs/task2_psi_resultados.log:** Demuestra empíricamente el escalado de tiempo lineal que requiere la intersección DH-PSI al cruzar de manera opaca listas de hasta $25.000$ sospechosos contra el pasaje de un vuelo comercial, ratificando además cómo la herramienta normaliza e identifica a objetivos sin alertar a los demás inocentes.
+- **logs/task3_cpir_resultados.log:** Avala la asertividad y contundencia del protocolo CPIR conforme crece la base de datos a consultar (desde 300 hasta los 1273 vuelos requeridos), documentando su latencia y eficacia bajo una validación 100% ciega y confidencial.
+
+---
+
+## 5. Análisis de Alternativas de Procesamiento Confidencial (TEE vs. Homomorfismo)
 
 En las sesiones de consultoría se planteó la disyuntiva entre utilizar aproximaciones basadas en software (Criptografía Homomórfica), aproximaciones basadas en hardware (Trusted Execution Environments - TEE como Intel SGX o AMD SEV) o una combinación de ambas ("Absolute Zero Trust Processing"). 
 
@@ -132,7 +142,7 @@ Tras evaluar los requisitos y el entorno de la aerolínea, hemos decidido **desc
 
 ---
 
-## 5. Gestión del Ciclo de Vida del Dato (DLM) y estrategia "Always Encrypted"
+## 6. Gestión del Ciclo de Vida del Dato (DLM) y estrategia "Always Encrypted"
 
 El procesamiento no es la única fase crítica; también lo son el almacenamiento y, de manera muy especial, la eliminación de los datos de los clientes que inevitablemente pueden encontrarse replicados en múltiples subsistemas internos y externos (backups, logs, herramientas de analítica, cachés, clústeres secundarios).
 
@@ -146,18 +156,18 @@ Apostamos por la integración de una estrategia tecnológica integral orientada 
 
 ---
 
-## 6. Anexo: Propuestas de Inclusión para la Política de Privacidad (Sitio Web)
+## 7. Anexo: Propuestas de Inclusión para la Política de Privacidad (Sitio Web)
 
 A continuación se exponen los párrafos redactados y validados que deben integrarse inmediatamente en la web pública de la aerolínea. El objetivo es transparentar a los usuarios el correcto uso y tratamiento avanzado que se aplica sobre sus datos sin vulnerar su confianza.
 
-### 6.1. Tratamiento y envío de Gastos a infraestructura de Nube Pública (Tarea 1)
+### 7.1. Tratamiento y envío de Gastos a infraestructura de Nube Pública (Tarea 1)
 > **Tratamiento Confidencial en Servicios de Nube de Terceros**
 > *Para procesar sus ventajas de fidelización mediante la acumulación de sus gastos, nos apoyamos en infraestructuras externas de forma estrictamente lícita y segura. Empleamos avanzados algoritmos de Criptografía Homomórfica en nuestros sistemas antes de transmitir su información estadística. Esto significa que la nube suma matemáticamente su gasto, pero ni la nube ni sus administradores son capaces de leer o inspeccionar el saldo que usted aporta. Hacemos un uso legítimo de terceros proveedores operando a oscuras, asegurándonos de que su privacidad económica nunca se vea comprometida durante el procesamiento.*
 
-### 6.2. Evaluaciones de Seguridad contra Listas Gubernamentales (Tarea 2)
+### 7.2. Evaluaciones de Seguridad contra Listas Gubernamentales (Tarea 2)
 > **Colaboración Segura con Autoridades Gubernamentales**
 > *Hacemos una gestión diligente y obligatoria de su seguridad, colaborando con organismos gubernamentales para contrastar nuestras listas de vuelos contra bases de datos de delincuentes y sospechosos bajo búsqueda. Para garantizar el uso lícito de esta comprobación sin comprometer los derechos fundamentales de los pasajeros inocentes, usamos protocolos matemáticos de Intersección de Conjuntos Privados (PSI). Mediante este método, las autoridades solo descubrirán si en nuestro vuelo se halla algún terrorista o persona bajo reclamación judicial, resguardando de forma opaca y total la identidad y derechos del resto de ciudadanos libres de cargos.*
 
-### 6.3. Anonimato en las Consultas de Precios de Vuelos (Tarea 3)
+### 7.3. Anonimato en las Consultas de Precios de Vuelos (Tarea 3)
 > **Privacidad y Cero Rastreo en Consultas de Vuelos**
 > *Nos comprometemos a no rastrear ni perfilar sus intereses. Cuando usted requiere consultar los precios de posibles destinos, utilizamos tecnologías de Recuperación de Información Privada (CPIR) para garantizar el anonimato comercial total. Con esta implementación, nuestra plataforma le entregará ágilmente todos los costes solicitados efectuando el cómputo necesario para informarle sin poder extraer ni almacenar internamente registro alguno sobre a qué destino buscaba ir, eludiendo cualquier rastreo de sus decisiones preliminares.*
